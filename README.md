@@ -5,8 +5,7 @@ Color Picker for EmberJS using [pickr](https://github.com/Simonwep/pickr)
 
 [Demo & Documentation](https://astronomersiva.github.io/ember-pickr/)
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-pickr
@@ -74,7 +73,6 @@ resulting array to get the string representation of the colors.
 ```
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
