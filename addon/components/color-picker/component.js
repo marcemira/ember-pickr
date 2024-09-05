@@ -6,7 +6,7 @@ import { action, getProperties }  from '@ember/object';
 import { arg } from 'ember-arg-types';
 import { object, func, string, bool, number, array } from 'prop-types';
 import mergeDeep from "ember-pickr/utils/mergeDeep";
-import Pickr from 'pickr';
+import Pickr from '@simonwep/pickr';
 
 const OPTION_FIELDS = [
   'theme',
@@ -26,7 +26,7 @@ const OPTION_FIELDS = [
   'showAlways',
   'closeWithKey',
   'position',
-  'adjustableNumber'
+  'adjustableNumbers'
 ];
 
 const DEFAULT_COMPONENTS = {

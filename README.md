@@ -72,7 +72,6 @@ resulting array to get the string representation of the colors.
 }
 ```
 
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
