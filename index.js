@@ -18,16 +18,6 @@ module.exports = {
     },
   },
 
-  choosePickrForTargets(targets = {}) {
-    const { browsers = [] } = targets;
-    const browserQuery = browsers.join(',');
-    if (caniuse.isSupported('es6-module', browserQuery)) {
-      return '@simonwep/pickr/dist/pickr.min.js';
-    }
-
-    return '@simonwep/pickr/dist/pickr.es5.min.js';
-  },
-
   included: function () {
     this._super.included.apply(this, arguments);
 
@@ -42,6 +32,6 @@ module.exports = {
     );
 
     const targets = this.project.targets;
-    this.options.autoImport.alias.pickr = this.choosePickrForTargets(targets);
+    this.options.autoImport.alias.pickr = '@simonwep/pickr/dist/pickr.es5.min';
   },
 };

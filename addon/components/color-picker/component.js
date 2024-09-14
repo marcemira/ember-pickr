@@ -6,7 +6,7 @@ import { action, getProperties }  from '@ember/object';
 import { arg } from 'ember-arg-types';
 import { object, func, string, bool, number, array } from 'prop-types';
 import mergeDeep from "ember-pickr/utils/mergeDeep";
-import Pickr from '@simonwep/pickr';
+import Pickr from '@simonwep/pickr/dist/pickr.es5.min';
 
 const OPTION_FIELDS = [
   'theme',
@@ -337,7 +337,7 @@ export default class ColorPicker extends Component {
       this.components
     );
 
-    this.pickr = Pickr.create({
+    this.pickr = new Pickr({
       el: element,
       ...options,
       components
@@ -383,7 +383,7 @@ export default class ColorPicker extends Component {
   }
 
   willDestroy() {
-    this.pickr.destroyAndRemove();
+    this.pickr?.destroyAndRemove();
 
     super.willDestroy(...arguments);
   }
